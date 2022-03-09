@@ -7,10 +7,12 @@ const parking = document.getElementById('parking');
 populateUI();
 let price = +parking.value;
 
-// Save selected movie index and price
-function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem('selectedMovieIndex', movieIndex);
-  localStorage.setItem('selectedMoviePrice', moviePrice);
+
+
+// Save selected parking index and price
+function setParkingData(parkingIndex, parkingPrice) {
+  localStorage.setItem('selectedparkingIndex', parkingIndex);
+  localStorage.setItem('selectedparkingPrice', parkingPrice);
 }
 
 // update total and count
@@ -42,17 +44,17 @@ function populateUI() {
     });
   }
 
-  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+  const selectedparkingIndex = localStorage.getItem('selectedParkingIndex');
 
-  if (selectedMovieIndex !== null) {
-    parking.selectedIndex = selectedMovieIndex;
+  if (selectedparkingIndex !== null) {
+    parking.selectedIndex = selectedparkingIndex;
   }
 }
 
 // parking select event
 parking.addEventListener('change', (e) => {
   price = +e.target.value;
-  setMovieData(e.target.selectedIndex, e.target.value);
+  setParkingData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
 });
 
