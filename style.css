@@ -63,7 +63,7 @@ body {
 
 .seat:not(.occupied):hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .showcase .seat:not(.occupied):hover {
@@ -97,7 +97,7 @@ body {
 }
 
 .heading {
-  background-color: #fff;
+  background-color: rgb(221, 140, 140);
   height: 50px;width: 100%;
   margin: 15px 0;
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
