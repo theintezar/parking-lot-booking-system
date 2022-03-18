@@ -61,11 +61,22 @@ parking.addEventListener('change', (e) => {
 // Seat click event
 container.addEventListener('click', (e) => {
   if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
-    e.target.classList.toggle('selected');
+     e.target.classList.toggle('selected');
+  
 
     updateSelectedCount();
   }
 });
+
+function Book(){
+  alert("Seat is booked");
+ 
+
+   
+  }
+  
+
+
 
 // intial count and total
 updateSelectedCount();
